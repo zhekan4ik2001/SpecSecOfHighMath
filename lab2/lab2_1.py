@@ -98,11 +98,6 @@ def solve_by_transformed_iteration(A, b, eps=0.0001, max_iterations=2000):
     
     spectral_radius = power_iteration(np.abs(B))
 
-    if spectral_radius >= 1:
-        print("Cходимость не выполняется")
-    else:
-        print("Сходимость выполняется")
-
     for iteration in range(max_iterations):
         x_new = matrix_multiply(B, x) + c
 
